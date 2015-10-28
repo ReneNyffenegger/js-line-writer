@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>HTML Writer</title>
+
+  <style type='text/css'> 
+
+    .canvas { 
+      position: relative;
+      left:1cm;
+      width: 12cm;
+      background-color: #e3d3f3;
+    }
+
+    #canvas_rtl {direction: rtl}
+
+   </style>
+
+  <script type='text/javascript' src='line_writer.js'></script>
+
+  <script type="text/javascript">
+
+
+  function main() {
+
+    test(true , 'canvas_ltr');
+    test(false, 'canvas_rtl');
+
+  }
+
+
+  function test(left_to_right, canvas_name) {
+
+    var canvas = document.getElementById(canvas_name);
+
+       tq84.line_writer.init(
+          canvas,
+         '10cm',
+         {left_to_right: left_to_right}
+       );
+
+      var ret = tq84.line_writer.emit(30,
+           [ 'one<br>eins',
+             'two<br>zwei',
+             'three<br>drei',
+             'four<br>vier',
+             'five<br>fünf',
+             'six<br>sechs',
+             'seven<br>sieben',
+             'eight<br>acht',
+             'nine<br>neun',
+             'ten<br>zehn',
+             'apple<br>Apfel',
+             'pet<br>Haustier',
+             'immediatly<br>sofort',
+             'foo<br>bar<br>baz<br><b>bold</b>',
+             'sun cream<br>Sonnencreme',
+             'foo<br>bar<br>baz<br><b>bold</b><br><i>italic</i>',
+             'prompt<br>unverzüglich',
+             '<div style="border: 1px solid black">bordered</div>',
+             'a',
+             'b',
+             'c',
+             'd',
+             'e',
+             'f',
+             'g',
+             'h',
+             'i',
+             'j'
+          ]
+         );
+
+      canvas.style.height = ret.height_px + 'px';
+  
+  }
+
+  </script>
+
+</head>
+<body onload='main();'>
+
+<h1>This is a test</h1>
+
+  <h2>Left to right</h2>
+
+      <div class='canvas' id='canvas_ltr'></div>
+
+  <h2>Right to left</h2>
+
+      <div class='canvas' id='canvas_rtl'></div>
+
+</body>
+</html>
