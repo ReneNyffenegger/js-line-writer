@@ -14,6 +14,9 @@ tq84.line_writer.init = function(
 
   this.body  = document.getElementsByTagName('body')[0];
 
+  if (typeof(opts) === 'undefined') {
+    opts={};
+  }
 
   if (typeof (opts.left_to_right) === 'undefined') {
     this.left_to_right = true;
