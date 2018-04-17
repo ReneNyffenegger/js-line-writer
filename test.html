@@ -34,47 +34,45 @@
 
     var canvas = document.getElementById(canvas_name);
 
-       lw = new tq84.line_writer(
-          canvas,
-         '10cm',
-         {left_to_right      : left_to_right,
-          start_from_top_px  : 30,
-         }
-       );
+    lw = new tq84.line_writer(
+       canvas,
+      '10cm',
+      {left_to_right      : left_to_right,
+       start_from_top_px  : 30,
+      }
+    );
 
-      var ret = lw.emit(
-           [ 'one<br>eins',
-             'two<br>zwei',
-             'three<br>drei',
-             'four<br>vier',
-             'five<br>fünf',
-             'six<br>sechs',
-             'seven<br>sieben',
-             'eight<br>acht',
-             'nine<br>neun',
-             'ten<br>zehn',
-             'apple<br>Apfel',
-             'pet<br>Haustier',
-             'immediatly<br>sofort',
-             'foo<br>bar<br>baz<br><b>bold</b>',
-             'sun cream<br>Sonnencreme',
-             'foo<br>bar<br>baz<br><b>bold</b><br><i>italic</i>',
-             'prompt<br>unverzüglich',
-             '<div style="border: 1px solid black">bordered</div>',
-             'a',
-             'b',
-             'c',
-             'd',
-             'e',
-             'f',
-             'g',
-             'h',
-             'i',
-             'j'
-          ]
-         );
 
-      canvas.style.height = ret.height_px + 'px';
+    lw.emit('one<br>eins');
+    lw.emit('two<br>zwei');
+    lw.emit('three<br>drei');
+    lw.emit('four<br>vier');
+    lw.emit('five<br>fünf');
+    lw.emit('six<br>sechs');
+    lw.emit('seven<br>sieben');
+    lw.emit('eight<br>acht');
+    lw.emit('nine<br>neun');
+    lw.emit('ten<br>zehn');
+    lw.emit('apple<br>Apfel');
+    lw.emit('pet<br>Haustier');
+    lw.emit('immediatly<br>sofort');
+    lw.emit('foo<br>bar<br>baz<br><b>bold</b>');
+    lw.emit('sun cream<br>Sonnencreme');
+    lw.emit('foo<br>bar<br>baz<br><b>bold</b><br><i>italic</i>');
+    lw.emit('prompt<br>unverzüglich');
+    lw.emit('<div style="border: 1px solid black">bordered</div>');
+    lw.emit('a');
+    lw.emit('b');
+    lw.emit('c');
+    lw.emit('d');
+    lw.emit('e');
+    lw.emit('f');
+    lw.emit('g');
+    lw.emit('h');
+    lw.emit('i');
+    lw.emit('j');
+
+    canvas.style.height = '500px';
   
   }
 

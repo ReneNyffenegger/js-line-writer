@@ -26,14 +26,15 @@ tq84.line_writer = function(canvas_div, width_out, opts) {
 
     this.cur_pos_x_px = 0;
     this.cur_pos_y_px = start_from_top_px;
+
+    this.max_line_height_px = 0;
 }
 
 
-tq84.line_writer.prototype.emit = function (html_texts) {
+tq84.line_writer.prototype.emit = function (html_text) {
 
-  var max_line_height_px = 0;
 
-  html_texts.map(function(html_text) {
+//html_texts.map(function(html_text) {
   
     var w=document.createElement(null);
 
@@ -49,9 +50,9 @@ tq84.line_writer.prototype.emit = function (html_texts) {
     let new_line = false;
 
     if (this.cur_pos_x_px + html_text_width_px > this.width_out_px ) { // New line?
-       this.cur_pos_y_px += max_line_height_px + this.gap_y_px;
+       this.cur_pos_y_px += this.max_line_height_px + this.gap_y_px;
        this.cur_pos_x_px  = 0;
-       max_line_height_px = html_text_height_px; // w.clientHeight;
+       this.max_line_height_px = html_text_height_px; // w.clientHeight;
        new_line = true;
     }
     
@@ -65,18 +66,19 @@ tq84.line_writer.prototype.emit = function (html_texts) {
   
     this.cur_pos_x_px += html_text_width_px + this.gap_x_px;
     if (! new_line) {
-      if (max_line_height_px < html_text_height_px) {
-         max_line_height_px = html_text_height_px;
+      if (this.max_line_height_px < html_text_height_px) {
+         this.max_line_height_px = html_text_height_px;
       }
     }
     w.style.visibility = 'visible';
   
-  }, this);
+//}, this);
 
 
-  return {
-    height_px: this.cur_pos_y_px + max_line_height_px
-  };
+//return {
+//  height_px: this.cur_pos_y_px + this.max_line_height_px
+//};
+
 }
 
 tq84.line_writer.prototype.calculate_width_px = function(width_out) {
