@@ -32,9 +32,6 @@ tq84.line_writer = function(canvas_div, width_out, opts) {
 
 
 tq84.line_writer.prototype.emit = function (html_text) {
-
-
-//html_texts.map(function(html_text) {
   
     var w=document.createElement(null);
 
@@ -71,13 +68,12 @@ tq84.line_writer.prototype.emit = function (html_text) {
       }
     }
     w.style.visibility = 'visible';
-  
-//}, this);
 
+}
 
-//return {
-//  height_px: this.cur_pos_y_px + this.max_line_height_px
-//};
+tq84.line_writer.prototype.height = function() {
+
+  return this.cur_pos_y_px + this.max_line_height_px;
 
 }
 
