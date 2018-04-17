@@ -7,8 +7,6 @@ tq84.line_writer = function(canvas_div, width_out, opts) {
 
     this.canvas_div = canvas_div;
 
-    this.body  = document.getElementsByTagName('body')[0];
-
     if (typeof(opts) === 'undefined') {
       opts={};
     }
@@ -81,11 +79,12 @@ tq84.line_writer.prototype.height = function() {
 tq84.line_writer.prototype.calculate_width_px = function(width_out) {
 
   var div_ = document.createElement('div');
-  this.body.appendChild(div_);
+  document.body.appendChild(div_);
+
   div_.style.width = width_out;
   var width_px   = div_.clientWidth;
-  this.body.removeChild(div_);
+
+  document.body.removeChild(div_);
 
   return width_px;
-
 }
