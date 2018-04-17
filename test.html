@@ -34,13 +34,15 @@
 
     var canvas = document.getElementById(canvas_name);
 
-       tq84.line_writer.init(
+       lw = new tq84.line_writer(
           canvas,
          '10cm',
-         {left_to_right: left_to_right}
+         {left_to_right      : left_to_right,
+          start_from_top_px  : 30,
+         }
        );
 
-      var ret = tq84.line_writer.emit(30,
+      var ret = lw.emit(
            [ 'one<br>eins',
              'two<br>zwei',
              'three<br>drei',
