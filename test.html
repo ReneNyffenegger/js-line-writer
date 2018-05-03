@@ -29,7 +29,6 @@
 
   }
 
-
   function test(left_to_right, canvas_name) {
 
     var canvas = document.getElementById(canvas_name);
@@ -71,6 +70,11 @@
     lw.emit('h');
     lw.emit('i');
     lw.emit('j');
+
+    lw.new_line();
+    lw.emit('This item should<br>be on a new line');
+    lw.emit('no &lt;br&gt;');
+    lw.emit('abc<br>def<br>ghi');
 
     canvas.style.height = ( lw.height() + 20 ) + 'px';
   
