@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Test trial for a static solution for lines with stacked elements</title>
+  <style>
+
+    .container {width: 40em;}
+
+    .box {
+      float: left; padding: 0.25em;
+      height: 5em;
+      border-bottom: 1px black solid;
+    }
+    .l1, .l2, .l3 {display: block}
+
+    .l2 {color: #bbf; font-size: 0.9em}
+
+    .item {font-size: 2em; color: #f70;}
+
+    .break {clear:both}
+  </style>
+</head>
+<body>
+
+  <div class='container'>
+
+     <span class='box'><span class='item'>1</span></span>
+     <span class='box'><span class='l1'>Lorem</span><span class='l2'>1</span><span class='l3'>Dies</span></span>
+     <span class='box'><span class='l1'>ipsum</span><span class='l2'>2</span><span class='l3'>ist</span></span>
+     <span class='box'><span class='l1'>sapientem</span><span class='l2'>3</span><span class='l3'>ein</span></span>
+     <span class='box'><span class='l1'>ne</span><span class='l2'>4</span><span class='l3'>Beispiel</span></span>
+     <span class='box'><span class='l1'>neque</span><span class='l2'>5</span><span class='l3'>für</span></span>
+     <span class='box'><span class='l1'>dolor</span><span class='l2'>6</span><span class='l3'>einen</span></span>
+     <span class='box'><span class='l1'>erat,</span><span class='l2'>7</span><span class='l3'>Blindtext,</span></span>
+     <span class='box'><span class='l1'>eros</span><span class='l2'>8</span><span class='l3'>der</span></span>
+     <span class='box'><span class='l1'>solet</span><span class='l2'>9</span><span class='l3'>auf</span></span>
+     <span class='box'><span class='l1'>invidunt</span><span class='l2'>10</span><span class='l3'>deutsch</span></span>
+     <span class='box'><span class='l1'>duo</span><span class='l2'>11</span><span class='l3'>geschrieben</span></span>
+     <span class='box'><span class='l1'>Quisque</span><span class='l2'>12</span><span class='l3'>ist.</span></span>
+     <span class='box'><span class='l1'>aliquid</span><span class='l2'>13</span><span class='l3'>Es</span></span>
+     <span class='box'><span class='l1'>leo.</span><span class='l2'>14</span><span class='l3'>gibt</span></span>
+     <span class='box'><span class='l1'>Pretium</span><span class='l2'>15</span><span class='l3'>noch</span></span>
+     <span class='box'><span class='l1'>patrioque</span><span class='l2'>16</span><span class='l3'>viele</span></span>
+     <span class='box'><span class='l1'>sociis</span><span class='l2'>17</span><span class='l3'>weitere</span></span>
+     <span class='box'><span class='l1'>eu</span><span class='l2'>18</span><span class='l3'>Arten</span></span>
+     <span class='box'><span class='l1'>nihil</span><span class='l2'>19</span><span class='l3'>des</span></span>
+     <span class='box'><span class='l1'>Cum</span><span class='l2'>20</span><span class='l3'>Hauses,</span></span>
+     <span class='box'><span class='l1'>enim</span><span class='l2'>21</span><span class='l3'>wobei</span></span>
+     <span class='box'><span class='l1'>ad,</span><span class='l2'>22</span><span class='l3'>die</span></span>
+     <span class='box'><span class='l1'>ipsum</span><span class='l2'>23</span><span class='l3'>ersten</span></span>
+     <span class='box'><span class='l1'>alii</span><span class='l2'>24</span><span class='l3'>Menschen</span></span>
+     <span class='box'><span class='l1'>vidisse</span><span class='l2'>25</span><span class='l3'>heute</span></span>
+     <span class='box'><span class='l1'>justo</span><span class='l2'>26</span><span class='l3'>nicht</span></span>
+     <span class='box'><span class='l1'>id.</span><span class='l2'>27</span><span class='l3'>sind.</span></span>
+     <span class='box'><span class='l1'>Option</span><span class='l2'>28</span><span class='l3'>Zudem</span></span>
+     <span class='box'><span class='l1'>porttitor</span><span class='l2'>29</span><span class='l3'>sind</span></span>
+     <span class='box'><span class='l1'>diam</span><span class='l2'>30</span><span class='l3'>Beispiele</span></span>
+     <span class='box'><span class='l1'>voluptua.</span><span class='l2'>31</span><span class='l3'>jetzt</span></span>
+     <span class='box'><span class='l1'>Cu</span><span class='l2'>32</span><span class='l3'>noch</span></span>
+     <span class='box'><span class='l1'>Eam</span><span class='l2'>33</span><span class='l3'>frei,</span></span>
+     <span class='box'><span class='l1'>augue</span><span class='l2'>34</span><span class='l3'>denn</span></span>
+     <span class='box'><span class='l1'>dolor</span><span class='l2'>35</span><span class='l3'>man</span></span>
+     <span class='box'><span class='l1'>dolores</span><span class='l2'>36</span><span class='l3'>sollte</span></span>
+     <span class='box'><span class='l1'>quis,</span><span class='l2'>37</span><span class='l3'>bedenken,</span></span>
+     <span class='box'><span class='l1'>Nam</span><span class='l2'>38</span><span class='l3'>der</span></span>
+     <span class='box'><span class='l1'>aliquando</span><span class='l2'>39</span><span class='l3'>Text</span></span>
+     <span class='box'><span class='l1'>elitr</span><span class='l2'>40</span><span class='l3'>macht</span></span>
+     <span class='box'><span class='l1'>Etiam</span><span class='l2'>41</span><span class='l3'>wenig</span></span>
+     <span class='box'><span class='l1'>consetetur.</span><span class='l2'>42</span><span class='l3'>Sinn.</span></span>
+
+     <div class='break'></div>
+
+     <span class='box'><span class='item'>2</span></span>
+     <span class='box'><span class='l1'>Fringilla</span><span class='l2'>43</span><span class='l3'>Mit</span></span>
+     <span class='box'><span class='l1'>lucilius</span><span class='l2'>44</span><span class='l3'>brausender</span></span>
+     <span class='box'><span class='l1'>mel</span><span class='l2'>45</span><span class='l3'>Geschwindigkeit</span></span>
+     <span class='box'><span class='l1'>adipiscing</span><span class='l2'>46</span><span class='l3'>war</span></span>
+     <span class='box'><span class='l1'>rebum.</span><span class='l2'>47</span><span class='l3'>der</span></span>
+     <span class='box'><span class='l1'>Sit</span><span class='l2'>48</span><span class='l3'>Titel</span></span>
+     <span class='box'><span class='l1'>nulla</span><span class='l2'>49</span><span class='l3'>des</span></span>
+     <span class='box'><span class='l1'>Integer</span><span class='l2'>50</span><span class='l3'>neuen</span></span>
+     <span class='box'><span class='l1'>ad</span><span class='l2'>51</span><span class='l3'>Boots</span></span>
+     <span class='box'><span class='l1'>volumus,</span><span class='l2'>52</span><span class='l3'>in</span></span>
+     <span class='box'><span class='l1'>dicta</span><span class='l2'>53</span><span class='l3'>naher</span></span>
+     <span class='box'><span class='l1'>scriptorem</span><span class='l2'>54</span><span class='l3'>Ferne,</span></span>
+     <span class='box'><span class='l1'>viderer</span><span class='l2'>55</span><span class='l3'>weshalb</span></span>
+     <span class='box'><span class='l1'>lobortis</span><span class='l2'>56</span><span class='l3'>sich</span></span>
+     <span class='box'><span class='l1'>est</span><span class='l2'>57</span><span class='l3'>der</span></span>
+     <span class='box'><span class='l1'>Utinam,</span><span class='l2'>58</span><span class='l3'>Briefträger</span></span>
+     <span class='box'><span class='l1'>enim</span><span class='l2'>59</span><span class='l3'>einen</span></span>
+     <span class='box'><span class='l1'>commune</span><span class='l2'>60</span><span class='l3'>roten</span></span>
+     <span class='box'><span class='l1'>corrumpit</span><span class='l2'>61</span><span class='l3'>Mantel</span></span>
+     <span class='box'><span class='l1'>Aenean</span><span class='l2'>62</span><span class='l3'>zur</span></span>
+     <span class='box'><span class='l1'>erat</span><span class='l2'>63</span><span class='l3'>Reinigung</span></span>
+     <span class='box'><span class='l1'>tellus.</span><span class='l2'>64</span><span class='l3'>brachte.</span></span>
+     <span class='box'><span class='l1'>Metus</span><span class='l2'>65</span><span class='l3'>Ein</span></span>
+     <span class='box'><span class='l1'>sed</span><span class='l2'>66</span><span class='l3'>weiterer</span></span>
+     <span class='box'><span class='l1'>amet</span><span class='l2'>67</span><span class='l3'>Punkt</span></span>
+     <span class='box'><span class='l1'>dolore</span><span class='l2'>68</span><span class='l3'>wäre</span></span>
+     <span class='box'><span class='l1'>justo,</span><span class='l2'>69</span><span class='l3'>es,</span></span>
+     <span class='box'><span class='l1'>gubergren</span><span class='l2'>70</span><span class='l3'>die</span></span>
+     <span class='box'><span class='l1'>sed.</span><span class='l2'>71</span><span class='l3'>verständliche</span></span>
+  </div>
+
+  <div class='break'></div>
+  <hr>
+
+  <div>
+    Text after
+  </div>
+
+</body>
+</html>
